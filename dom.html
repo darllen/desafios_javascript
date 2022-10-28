@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Página</title>
+    <meta charset="utf-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+        h1 {
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="titPrincipal">Título</h1>
+    <h2>Parágrafo 1</h2>
+    <p id="p1" style="color:#006400;font-size:14px"></p>
+    <h2>Parágrafo 2</h2>
+    <p id="p2" style="color:#006400;font-size:14px">Sou o 2º parágrafo</p>
+
+    <label>Ensino Fundamental</label>
+    <input type="radio" name="escolaridade" value="ef" id="ef"><br>
+    <label>Ensino Médio</label>
+    <input type="radio" name="escolaridade" value="em" id="em"><br>
+    <label>Ensino Superior</label>
+    <input type="radio" name="escolaridade" value="es" id="es"><br>
+
+    <script>
+        document.body.style.backgroundColor = "#FFFFFF";
+
+        var title = document.getElementById("titPrincipal");
+        var paragrafo1 = document.getElementById("p1");
+        var paragrafo2 = document.getElementById("p2");
+        var titles = document.getElementsByTagName("h2");
+        var elementos = document.getElementsByClassName("minhaClasse")
+        var tamanhos = document.getElementsByTagName("p");
+        var ensino = document.getElementsByName("escolaridade");
+
+        title.innerHTML = "Primeira Aula de DOM";
+        title.style.color = "#757575";
+        title.style.fontSize = "30px";
+        title.style.fontFamily = "'Courgette', cursive";
+
+        paragrafo1.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+        paragrafo2.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+        paragrafo1.style.color = "#C2185B";
+        paragrafo1.style.fontSize = "15px";
+        paragrafo1.style.backgroundColor = "#F8BBD0";
+        paragrafo1.style.width = "500px";
+
+        paragrafo2.style.color = "#212121";
+        paragrafo2.style.fontSize = "15px";
+        paragrafo2.style.backgroundColor = "#BDBDBD"
+        paragrafo2.style.width = "500px";
+
+
+        for (e in titles) { titles[e].style.color = "#00BCD4" }
+        for (e in ensino) {
+            ensino[i].style.backgroundColor = "yellow";
+        }
+    </script>
+</body>
