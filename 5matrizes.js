@@ -25,9 +25,9 @@ function questao1() {
     document.write('Suas respostas: [', resultado[0], ']')
     pulaLinha()
     if (resultado[1] == 1) {
-        document.write('Acertou Mizeravi!')
+        document.write('Acertou')
     } else {
-        document.write('Ain pai parah, melhore!')
+        document.write('Melhore!')
     }
 
 }
