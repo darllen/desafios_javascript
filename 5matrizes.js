@@ -1,35 +1,22 @@
 const pulaLinha = () => document.write('<br>')
 
 function questao1() {
-    gabarito = new Array('A', 'C', 'E', 'B', 'D', 'B', 'B', 'C', 'A', 'E')
-    answer = new Array()
-    resultado = []
+    gabarito = new Array('A', 'C', 'E', 'B', 'D', 'B', 'B', 'C', 'A', 'E');
+    answer = new Array();
+    matriz = new Array();
 
     for (i = 0; i <= 9; i++) {
-        answer.push(prompt('Digite a resposta: '))
+        answer.push(prompt('Digite a resposta: '));
     }
 
-    resultado.push(answer)
-
-    termo1 = gabarito.join('')
-    termo2 = answer.join('')
-
-    if (termo1 === termo2) {
-        resultado.push(1)
-        console.log('True')
-    } else {
-        resultado.push(0)
-        console.log('False')
+    for (i = 0; i <= 9; i++) {
+        if (gabarito[i] == answer[i]){
+            matriz.push([answer[i],1]);
+        } else {
+            matriz.push([answer[i],0]);
+        }
     }
-
-    document.write('Suas respostas: [', resultado[0], ']')
-    pulaLinha()
-    if (resultado[1] == 1) {
-        document.write('Acertou')
-    } else {
-        document.write('Melhore!')
-    }
-
+    console.log(matriz);
 }
 
 function questao2() {
@@ -183,7 +170,7 @@ function questao6() {
 
 }
 
-function questao7() { /* FALTA VALIAR OS VALORES -3 <= habilidades <= 3 */
+function questao7() { /* FALTA VALDIAR OS VALORES -3 <= habilidades <= 3 */
     characters = new Array()
 
     do {
@@ -221,7 +208,7 @@ function questao8() {
     matriz = new Array()
 
     for (i = 1; i <= 20; i++) {
-        matriz.push([i, 'a'])
+        matriz.push([i, ''])
     }
 
     percorrer = matriz.map(function (lec) {
@@ -234,21 +221,16 @@ function questao8() {
 }
 
 function questao9() {
-    numeros = new Array()
-    quadrados = new Array()
     matriz = new Array()
 
-    for (i = 10; i < 25; i++) {
-        numeros.push(i)
+    for (i = 1; i <= 15; i++) {
+        matriz.push([i, 0])
     }
-
-    percorrer = numeros.map(function (got) {
-        quadrados.push(got ** 2)
-    })
-
-    matriz.push(numeros)
-    matriz.push(quadrados)
-
+    percorrer = matriz.map(
+        function (got) {
+            got[1] = got[0] ** 2
+        }
+    );
     console.log(matriz)
 }
 
@@ -279,7 +261,7 @@ function questao10() {
         document.write('Compra ', i, ': ')
         pulaLinha();
 
-/* FALTA ACHAR UM JEITO DE EXIBIR */
+        /* FALTA ACHAR UM JEITO DE EXIBIR */
 
         document.write('Valor Compra: R$ ', valorCompra)
         pulaLinha(); pulaLinha(); pulaLinha();
@@ -287,15 +269,6 @@ function questao10() {
 
     console.log(compras)
 
-
-
 }
 
-function questao11() {
-
-
-
-}
-
-
-questao10();
+questao1();
